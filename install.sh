@@ -41,11 +41,9 @@ git config --global push.autoSetupRemote true
 git config --global core.editor "code --wait"
 
 ## Wait for Visual Studio Code to be available
-echo "Waiting for Visual Studio Code (code command) to be available..."
-while ! command -v code &> /dev/null; do
-    sleep 2
-done
-echo "Visual Studio Code is available. Proceeding with extension installation."
+
+VSCODE_SSH_BIN=$(echo "$BROWSER" | sed -e 's/\/helpers\/browser.sh//g')
+alias code='$VSCODE_SSH_BIN/remote-cli/code'
 
 ## Install extension
 
