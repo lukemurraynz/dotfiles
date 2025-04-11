@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 zshrc() {
     echo "==========================================================="
@@ -41,7 +41,6 @@ git config --global push.autoSetupRemote true
 git config --global core.editor "code --wait"
 
 ## Install extension
-
 
 # Visual Studio Code :: Package list
 pkglist=(
